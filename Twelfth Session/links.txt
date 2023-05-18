@@ -1,0 +1,74 @@
+# py is there
+python --version
+# pip is there
+pip --version
+
+
+# official pip install (https://pip.pypa.io/en/stable/installation/)
+py -m ensurepip --upgrade
+
+
+# pypi page (https://pypi.org/) (use anti-sanction)
+## normal
+pip install package-name
+pip install pyttsx3
+
+## incorrect path
+python -m pip install package-name
+
+## bad connection (HTTPSConnectionPool(host='files.pythonhosted.org', port=443): Read timed out.)
+pip install --default-timeout==1000 package-name
+
+## batch installation
+pip install -r requirements.txt
+
+
+# show package details
+pip show package-name
+pip show pyttsx3
+
+
+# installing specific version
+## new
+pip install package-name==version
+pip install pyttsx3==2.88
+
+## current
+pip install --force-reinstall -v "package-name==version"
+pip install --force-reinstall -v "MySQL_python==1.2.2"
+
+
+# uninstalling package
+pip uninstall package-name
+
+
+# package dependencies
+pip show package-name
+
+
+# download package files offline
+## single
+pip download package-name
+
+## batch
+pip download -r requirements.txt
+
+
+# install packages from offline dir
+## single
+pip install --no-index --find-links /path/to/download/dir/ package name
+
+## batch
+pip install --no-index --find-links /path/to/download/dir/ -r requirements.txt
+
+
+# python std libs
+os, time
+(getcwd, mkdir, listdir, path.join, path.exists)(epoch, time, ctime, sleep)
+
+# pip libs
+tqdm, pyttsx3
+()()
+
+https://tqdm.github.io/
+https://github.com/nateshmbhat/pyttsx3
